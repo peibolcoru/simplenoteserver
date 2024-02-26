@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "initDb": "node src/db/initDb.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",

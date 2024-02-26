@@ -19,12 +19,7 @@ app.use(express.json());
 app.use(fileUpload())
 
 // Middleware de CORS
-app.use(cors({
-    origin: 'http://localhost:5173',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    headers: 'Content-Type,Authorization',
-    credentials: true,
-}));
+app.use(cors());
 
 // Información de la petición entrante
 app.use(morgan('dev'));
@@ -51,7 +46,7 @@ app.use((err,req,res,next)=>{
     });
 });
     
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log(`Server listening at http://localhost:${process.env.PORT}`)
 })
 
