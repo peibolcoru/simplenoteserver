@@ -8,6 +8,10 @@ const main = async () => {
     try {
 
         connection = await getDb();
+
+        console.log('Creando base de datos simplenote')
+        await connection.query('CREATE DATABASE IF NOT EXISTS simplenote ')
+        await connection.query('USE simplenote')
         
         console.log('Borrando tablas...')
         
