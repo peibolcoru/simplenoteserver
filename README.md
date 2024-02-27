@@ -68,6 +68,6 @@ En pruebas
 
 ## ✋ Autor <a name = "autor"></a>
 
-- GITHUB: [@peibolcoru](https://github.com/peibolcoru/simplenoteclient) 
+- GITHUB: [@peibolcoru](https://github.com/peibolcoru/simplenoteserver) 
 - LINKEDIN: https://www.linkedin.com/in/pablo-ferreno-veiga/
 - YOUTUBE: [@PabloFerreno](https://www.youtube.com/channel/UCayLZMzKTYX-B-qDRldXhRg)
