@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "2ceec877-daca-4d4c-b5a8-e9669e1e369a",
+		"name": "simplenote",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29013468"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"Pablo2\",\n    \"email\":\"pfv5@pfv.com\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"Pablo2\",\n    \"email\":\"pfv5@pfv.com\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "edit user avatar",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsIm5hbWUiOiJQZXBpw7FvIiwiaWF0IjoxNzAxMDc5NTYzfQ.7opOyvyb40SBRjTCGhx1_J5ymSeX2_82hiu9KPghR3w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/users/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "walls",
+			"item": [
+				{
+					"name": "new wall",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsIm5hbWUiOiJQZXBpw7FvIiwiaWF0IjoxNzAxMDc5NTYzfQ.7opOyvyb40SBRjTCGhx1_J5ymSeX2_82hiu9KPghR3w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"deporte\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/walls/addwall"
+					},
+					"response": []
+				},
+				{
+					"name": "delete wall",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IlBhYmxpdG8iLCJpYXQiOjE3MDE2ODgzMjh9.TFLmt1jUENfKc5SP5tpQEWZU9NSkpfJGyGJP2yJTs44",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"deporte\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/walls/delete/:wallID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"walls",
+								"delete",
+								":wallID"
+							],
+							"variable": [
+								{
+									"key": "wallID",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all walls",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIiwiaWF0IjoxNzAxMjU0MTYyfQ.jdqbePrDEcArwF2XbjgU7nRlMbNFF0J7FcJeApZ3ZKk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"deporte\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/walls"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "new note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIiwiaWF0IjoxNzAxMTcyMzgyfQ.KUkw2hIGO2zxeHNY8EBDCnc5HVYceUM0wHE-Wv1FydY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "primera nota",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "aojfosfohlksnclsancklnsdalcnlkasdnklcnsdlkncklsndklcnlksnklcnskn klkaskjdfksd",
+									"type": "text"
+								},
+								{
+									"key": "labelId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "oncourse",
+									"type": "text"
+								},
+								{
+									"key": "wallId",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/notes/new"
+					},
+					"response": []
+				},
+				{
+					"name": "select all wall notes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIiwiaWF0IjoxNzAxMjU0MTYyfQ.jdqbePrDEcArwF2XbjgU7nRlMbNFF0J7FcJeApZ3ZKk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "primera nota",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "text",
+									"value": "aojfosfohlksnclsancklnsdalcnlkasdnklcnsdlkncklsndklcnlksnklcnskn klkaskjdfksd",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "labelId",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "oncourse",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "wallId",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/notes/:wallId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"notes",
+								":wallId"
+							],
+							"variable": [
+								{
+									"key": "wallId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "select one note",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIiwiaWF0IjoxNzAxMjU0MTYyfQ.jdqbePrDEcArwF2XbjgU7nRlMbNFF0J7FcJeApZ3ZKk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "primera nota",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "text",
+									"value": "aojfosfohlksnclsancklnsdalcnlkasdnklcnsdlkncklsndklcnlksnklcnskn klkaskjdfksd",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "labelId",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "oncourse",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "wallId",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/notes/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"notes",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete note",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlBhYmxvIiwiaWF0IjoxNzAxMzM0MDQyfQ.Yo_BLcnG1UpvI42jwtLyGaE_p0dROID5iOGnnKh8d6s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "primera nota",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "text",
+									"value": "aojfosfohlksnclsancklnsdalcnlkasdnklcnsdlkncklsndklcnlksnklcnskn klkaskjdfksd",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "labelId",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "oncourse",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "wallId",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/notes/delete/:noteId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"notes",
+								"delete",
+								":noteId"
+							],
+							"variable": [
+								{
+									"key": "noteId",
+									"value": "29"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update note",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Labels",
+			"item": [
+				{
+					"name": "select all labels",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
