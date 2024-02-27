@@ -64,6 +64,8 @@ MYSQL_DB=
 
 ## 🚀 Tests <a name = "tests"></a> </span>
 
+En la carpeta postman está el archivo .json para importar todas las llamadas a la API para poder realizar pruebas en local.
+
 En pruebas
 
 ## ✋ Autor <a name = "autor"></a>
