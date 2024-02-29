@@ -11,7 +11,7 @@ const authUserController = require('../middelwares/authUserController.js');
 const getUserController = require('../controllers/users/getUserController.js');
 
 //Registro de Usuario
-
+router.get('/',(req,res)=>res.send("conectado"))
     //registro
 router.post('/users/register',newUserController);
     //login
