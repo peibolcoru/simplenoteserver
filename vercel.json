@@ -7,8 +7,25 @@
   ],
   "routes": [
     {
+      "src": "/users/register",
+      "dest": "./index.js"
+    },
+    {
+      "src": "/users/login",
+      "dest": "./index.js"
+    },
+    {
+      "src": "/users",
+      "dest": "./index.js"
+    },
+    {
+      "src": "/users/avatar",
+      "dest": "./index.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "./index.js"
     }
   ]
 }
+
